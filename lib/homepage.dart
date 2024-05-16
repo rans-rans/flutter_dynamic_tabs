@@ -66,7 +66,9 @@ class _HomepageState extends State<Homepage> {
                                 icon: const Icon(Icons.cancel))
                           ],
                         )));
-                    tabviews.add(CustomTabView(id: id, view: const Text("view")));
+                    tabviews.add(
+                      CustomTabView(id: id, view: const Text("view")),
+                    );
                     setState(() {});
                   },
                   icon: const Icon(Icons.add),
@@ -76,7 +78,9 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
         body: TabBarView(
-          children: [for (var view in tabviews) view.view],
+          children: [
+            for (var view in tabviews) view.view,
+          ],
         ),
       ),
     );
